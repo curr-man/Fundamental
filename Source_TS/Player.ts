@@ -317,9 +317,9 @@ export const global: globalType = {
         ],
         increase: [
             [],
-            [0, 1.4, 1.4, 1.4, 1.4, 1.4],
-            [0, 1.15, 1.2, 1.25, 1.35, 1.4, 4],
-            [0, 1.15, 1.25, 1.35, 10, 10],
+            [0, 1.35, 1.35, 1.35, 1.35, 1.35],
+            [0, 1.1, 1.2, 1.25, 1.35, 1.4, 4],
+            [0, 1.1, 1.25, 1.35, 10, 10],
             [0, 1.4, 1.55, 1.70, 1.85, 2],
             [0, 2, 2, 1.11],
             [0, 1.4]
@@ -506,8 +506,8 @@ export const global: globalType = {
                 'Radioactive Discharge'
             ],
             effectText: [
-                () => `Cost scaling will be -${format(0.03)} smaller with every level.`,
-                () => `Self-made Structures will boost each other by an additional +${format(0.01)}.`,
+                () => `Cost scaling will be -${format(0.05)} smaller with every level.`,
+                () => `Self-made Structures will boost each other by an additional +${format(0.05)}.`,
                 () => `Molecules will produce themselves ${format(calculateEffects.S1Research2())} times quicker.`,
                 () => `Discharge goals requirement will scale slower. (-2)\n(Creating this Research will make the next Discharge goal to be ${format(calculateEffects.dischargeCost(calculateEffects.dischargeScaling(player.researches[1][3] + 1)))} Energy)`,
                 () => { //[4]
@@ -519,7 +519,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1600, 4800, 16000, 32000, 16000, 24000],
             scaling: [400, 1200, 8000, 40000, 16000, 16000],
-            max: [5, 4, 8, 2, 4, 3],
+            max: [6, 5, 10, 2, 5, 5],
             maxActive: 6
         }, { //Stage 2
             name: [
@@ -549,7 +549,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [10, 400, 1e4, 1e5, 1e14, 1e22, 1e80],
             scaling: [1.366, 5, 1e3, 1e2, 1e3, 1e4, 1],
-            max: [8, 8, 4, 4, 2, 1, 1],
+            max: [10, 10, 5, 5, 2, 1, 1],
             maxActive: 6
         }, { //Stage 3
             name: [
@@ -580,7 +580,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1e-16, 1e-15, 1e-5, 1e2, 1e10, 1e11, 1e15, 1e14, 1e12],
             scaling: [11, 111, 22, 10, 100, 100, 10, 1e4, 1e3],
-            max: [9, 3, 8, 8, 2, 2, 6, 4, 4],
+            max: [15, 5, 10, 10, 5, 5, 10, 5, 5],
             maxActive: 9
         }, { //Stage 4
             name: [
@@ -605,7 +605,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1e3, 5e4, 1e8, 1e11, 1e28, 1e154],
             scaling: [10, 200, 1e12, 1, 2e8, 1e306],
-            max: [3, 2, 1, 1, 2, 1],
+            max: [3, 5, 1, 1, 5, 1],
             maxActive: 5
         }, { //Stage 5
             name: [
@@ -656,7 +656,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [4e5, 2e8, 1e9, 4e9, 1e16],
             scaling: [2, 2, 2, 3, 16],
-            max: [8, 14, 9, 5, 4],
+            max: [10, 14, 9, 5, 4],
             maxActive: 0
         }
     ],
@@ -692,7 +692,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [2000, 40000, 12000, 16000, 160000, 1.6e6],
             scaling: [0, 16000, 68000, 16000, 0, 1.6e6],
-            max: [1, 4, 2, 4, 1, 2],
+            max: [1, 4, 2, 6, 1, 2],
             maxActive: 0
         }, { //Stage 2
             name: [
@@ -754,7 +754,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1e-18, 1e-7, 1e26, 1e9, 1e-10, 1.98847e40],
             scaling: [10, 100, 1, 1e5, 1e12, 5.024e59],
-            max: [14, 6, 1, 5, 1, 2],
+            max: [20, 10, 1, 10, 1, 2],
             maxActive: 4
         }, { //Stage 4
             name: [
