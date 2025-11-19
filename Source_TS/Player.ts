@@ -308,7 +308,7 @@ export const global: globalType = {
         ],
         firstCost: [
             [],
-            [0, 0.005476, 6, 3, 24, 3],
+            [0, 0.005476, 3, 1.5, 12, 1.5],
             [0, 2.7753108348135e-3, 100, 1e7, 1e18, 1e23, 2.676e25],
             [0, 1e-19, 1e-9, 1e21, 1e17, 1e22],
             [0, 1, 1e5, 1e15, 1e27, 1e50],
@@ -1583,7 +1583,7 @@ export const prepareVacuum = (state: boolean) => { //Must not use direct player 
             buildingsInfo.name[1].unshift('Mass', 'Preons');
             buildingsInfo.hoverText[1].unshift('Mass', 'Preons');
         }
-        buildingsInfo.firstCost[1] = [0, 0.005476, 6, 3, 24, 3];
+        buildingsInfo.firstCost[1] = [0, 0.005476, 3, 1.5, 12, 1.5];
         buildingsInfo.maxActive[1] = buildingsInfo.firstCost[1].length;
         buildingsInfo.maxActive[2] = buildingsInfo.firstCost[2].length;
         buildingsInfo.maxActive[3] = buildingsInfo.firstCost[3].length;
