@@ -317,8 +317,8 @@ export const global: globalType = {
         ],
         increase: [
             [],
-            [0, 1.3, 1.3, 1.3, 1.3, 1.3],
-            [0, 1.1, 1.2, 1.25, 1.35, 1.4, 4],
+            [0, 1.4, 1.4, 1.4, 1.4, 1.4],
+            [0, 1.15, 1.2, 1.25, 1.35, 1.4, 4],
             [0, 1.1, 1.25, 1.35, 10, 10],
             [0, 1.4, 1.55, 1.70, 1.85, 2],
             [0, 2, 2, 1.11],
@@ -399,7 +399,7 @@ export const global: globalType = {
                 },
                 () => 'Spreads water too fast. 1 extra Sea per Ocean.\nIt will also improve Oceans effect scaling.'
             ],
-            cost: [10, 1e6, 1e10, 1e3, 1e4, 2e9, 5e20, 1e28, 2e48],
+            cost: [1e4, 1e6, 1e10, 1e3, 1e4, 2e9, 5e20, 1e28, 2e48],
             maxActive: 8
         }, { //Stage 3
             name: [
@@ -549,7 +549,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [10, 400, 1e4, 1e5, 1e14, 1e22, 1e80],
             scaling: [1.366, 5, 1e3, 1e2, 1e3, 1e4, 1],
-            max: [10, 10, 5, 5, 2, 1, 1],
+            max: [50, 10, 5, 5, 2, 1, 1],
             maxActive: 6
         }, { //Stage 3
             name: [
