@@ -317,7 +317,7 @@ export const global: globalType = {
         ],
         increase: [
             [],
-            [0, 1.35, 1.35, 1.35, 1.35, 1.35],
+            [0, 1.3, 1.3, 1.3, 1.3, 1.3],
             [0, 1.1, 1.2, 1.25, 1.35, 1.4, 4],
             [0, 1.1, 1.25, 1.35, 10, 10],
             [0, 1.4, 1.55, 1.70, 1.85, 2],
@@ -328,7 +328,7 @@ export const global: globalType = {
     },
     versesInfo: {
         firstCost: [120],
-        increase: [1.5]
+        increase: [1.25]
     },
     strangeInfo: {
         name: ['Strange quarks', 'Strangelets'],
@@ -506,8 +506,8 @@ export const global: globalType = {
                 'Radioactive Discharge'
             ],
             effectText: [
-                () => `Cost scaling will be -${format(0.05)} smaller with every level.`,
-                () => `Self-made Structures will boost each other by an additional +${format(0.05)}.`,
+                () => `Cost scaling will be -${format(0.03)} smaller with every level.`,
+                () => `Self-made Structures will boost each other by an additional +${format(0.01)}.`,
                 () => `Molecules will produce themselves ${format(calculateEffects.S1Research2())} times quicker.`,
                 () => `Discharge goals requirement will scale slower. (-2)\n(Creating this Research will make the next Discharge goal to be ${format(calculateEffects.dischargeCost(calculateEffects.dischargeScaling(player.researches[1][3] + 1)))} Energy)`,
                 () => { //[4]
@@ -519,7 +519,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1600, 4800, 16000, 32000, 16000, 24000],
             scaling: [400, 1200, 8000, 40000, 16000, 16000],
-            max: [6, 5, 10, 2, 5, 5],
+            max: [6, 10, 10, 2, 5, 5],
             maxActive: 6
         }, { //Stage 2
             name: [
