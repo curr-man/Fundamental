@@ -1134,7 +1134,7 @@ export const global: globalType = {
             ],
             cost: [],
             firstCost: [1, 2, 2, 24, 12, 4, 4, 24, 18000, 2.16e6],
-            scaling: [2, 3.4, 3, 1, 100, 1, 1.74, 1, 2.46, 2e6],
+            scaling: [2, 2, 3, 1, 100, 1, 1.74, 1, 2.46, 2e6],
             max: [8, 4, 3, 1, 1, 1, 3, 1, 6, 1],
             maxActive: 8
         }, { //Stage 4
@@ -1181,7 +1181,7 @@ export const global: globalType = {
             ],
             cost: [],
             firstCost: [1, 2, 4, 2, 12, 6, 6, 24, 12000, 2.4e5],
-            scaling: [2, 3.4, 3, 4, 1900, 1, 1.74, 1, 2, 3],
+            scaling: [2, 2, 3, 4, 1900, 1, 1.74, 1, 2, 3],
             max: [8, 4, 3, 2, 1, 1, 1, 1, 8, 3],
             maxActive: 8
         }, { //Stage 5
@@ -1628,9 +1628,9 @@ export const prepareVacuum = (state: boolean) => { //Must not use direct player 
         strangeness2Cost = [1, 1, 2, 2, 12, 4, 24];
         strangeness2Scaling = [2.46, 2, 3, 4, 800, 1, 1];
         strangeness3Cost = [1, 2, 2, 24, 12, 4, 4, 24];
-        strangeness3Scaling = [2, 3.4, 3, 1, 100, 1, 1.74, 1];
+        strangeness3Scaling = [2, 2, 3, 1, 100, 1, 1.74, 1];
         strangeness4Cost = [1, 2, 4, 2, 12, 6, 6, 24];
-        strangeness4Scaling = [2, 3.4, 3, 4, 1900, 1, 1.74, 1];
+        strangeness4Scaling = [2, 2, 3, 4, 1900, 1, 1.74, 1];
         strangeness5Cost = [24, 36, 4, 24, 15600, 24, 480, 120];
         strangeness5Scaling = [2, 2, 4, 1, 1, 1, 1, 1];
         strangenessInfo[1].maxActive = strangenessInfo[1].firstCost.length;
