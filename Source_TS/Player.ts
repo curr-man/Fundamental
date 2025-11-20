@@ -365,7 +365,7 @@ export const global: globalType = {
                 () => `Unspent Energy ${player.upgrades[1][10] === 1 ? '' : `^${format(0.5)}`} will boost 'Tritium' production of Molecules.\n(Boost: ${format(calculateEffects.S1Upgrade9(), { padding: true })})`,
                 () => "Unlock the full strength of 'Nuclear fusion' and increase effective Energy by 2."
             ],
-            cost: [40, 60, 100, 120, 180, 360, 1200, 3600, 12000, 80000, 2.4e6],
+            cost: [20, 30, 50, 60, 90, 180, 1200, 3600, 12000, 80000, 2.4e6],
             maxActive: 10
         }, { //Stage 2
             name: [
@@ -754,7 +754,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1e-18, 1e-7, 1e26, 1e9, 1e-10, 1.98847e40],
             scaling: [10, 100, 1, 1e5, 1e12, 5.024e59],
-            max: [20, 10, 1, 10, 1, 2],
+            max: [50, 10, 1, 10, 1, 2],
             maxActive: 4
         }, { //Stage 4
             name: [
@@ -1044,9 +1044,9 @@ export const global: globalType = {
                 () => `No Energy will be lost when creating Upgrades or Researches${player.challenges.supervoid[4] < 1 ? ', only works when Interstellar Stage is unlocked' : ''}.`
             ],
             cost: [],
-            firstCost: [1, 1, 1, 2, 12, 2, 24, 2, 12, 15600],
+            firstCost: [1, 1, 1, 2, 12, 2, 24, 2, 12, 1500],
             scaling: [2.46, 2, 6, 4, 400, 1, 1, 6, 10, 1e308],
-            max: [6, 4, 4, 2, 1, 1, 1, 2, 2, 1],
+            max: [6, 4, 4, 2, 1, 1, 1, 10, 2, 1],
             maxActive: 7
         }, { //Stage 2
             name: [
@@ -1590,7 +1590,7 @@ export const prepareVacuum = (state: boolean) => { //Must not use direct player 
         buildingsInfo.maxActive[4] = buildingsInfo.firstCost[4].length;
         buildingsInfo.maxActive[6] = buildingsInfo.firstCost[6].length;
 
-        upgrades1Cost = [40, 60, 100, 120, 180, 360, 1200, 3600, 12000, 80000];
+        upgrades1Cost = [20, 30, 50, 60, 90, 180, 1200, 3600, 12000, 80000];
         (upgradesInfo[2].cost[0] as Overlimit).setValue(10);
         (upgradesInfo[5].cost[3] as Overlimit).setValue(1e160);
         upgradesInfo[1].maxActive = upgradesInfo[1].cost.length;
