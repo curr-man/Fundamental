@@ -518,7 +518,7 @@ export const global: globalType = {
             ],
             cost: [],
             firstCost: [1600, 4800, 16000, 32000, 16000, 24000],
-            scaling: [400, 1200, 8000, 40000, 16000, 16000],
+            scaling: [300, 1000, 6000, 30000, 12000, 12000],
             max: [4, 7, 10, 2, 5, 5],
             maxActive: 6
         }, { //Stage 2
@@ -1601,7 +1601,7 @@ export const prepareVacuum = (state: boolean) => { //Must not use direct player 
         upgradesInfo[6].maxActive = upgradesInfo[6].cost.length;
 
         researches1Cost = [1600, 4800, 16000, 32000, 16000, 24000];
-        researches1Scaling = [400, 1200, 8000, 40000, 16000, 16000];
+        researches1Scaling = [300, 1000, 6000, 30000, 12000, 12000];
         researchesInfo[2].scaling[2] = 1e2;
         researchesInfo[2].scaling[3] = 1e3;
         researchesInfo[2].maxActive = researchesInfo[2].firstCost.length;
