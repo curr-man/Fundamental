@@ -604,8 +604,8 @@ export const global: globalType = {
             ],
             cost: [],
             firstCost: [1e3, 5e4, 1e8, 1e11, 1e28, 1e154],
-            scaling: [5, 50, 1e12, 1, 2e8, 1e306],
-            max: [3, 5, 1, 1, 5, 1],
+            scaling: [5, 50, 1e12, 1e5, 2e8, 1e306],
+            max: [3, 5, 2, 2, 5, 2],
             maxActive: 5
         }, { //Stage 5
             name: [
@@ -774,7 +774,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [4e4, 2e9, 1e50, 1e136, '1e680'] as unknown as Overlimit,
             scaling: [1e10, 1, 1, 1, 1],
-            max: [3, 2, 1, 1, 1],
+            max: [3, 1, 1, 1, 1],
             maxActive: 3
         }, { //Stage 5
             name: [
