@@ -192,7 +192,7 @@ export const calculateEffects: calculateEffectsType = {
         return next;
     },
     dischargeBase: (research = player.researches[1][4]) => {
-        let base = (4 + research) / 2;
+        let base = (8 + research) / 2;
         if (player.challenges.active === 0) { base = (base + player.tree[1][4] / 2) ** 0.5; }
         return base;
     },
