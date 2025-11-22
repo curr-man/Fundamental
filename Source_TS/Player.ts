@@ -1045,7 +1045,7 @@ export const global: globalType = {
             ],
             cost: [],
             firstCost: [1, 1, 1, 2, 12, 2, 24, 2, 12, 1500],
-            scaling: [2.46, 2, 6, 4, 400, 1, 1, 1.05, 10, 1e308],
+            scaling: [2.46, 2, 6, 4, 400, 1, 1, 1.001, 10, 1e308],
             max: [6, 4, 4, 2, 1, 1, 1, 2500, 2, 1],
             maxActive: 7
         }, { //Stage 2
@@ -1296,8 +1296,8 @@ export const global: globalType = {
         ],
         cost: [],
         firstCost: [0, 1, 1, 2, 4, 1],
-        scaling: [2, 0.75, 0.5, 2, 0, 1],
-        max: [2, 6, 8, 4, 1, 4]
+        scaling: [2, 0.1, 0.1, 2, 0, 0.1],
+        max: [2, 15, 15, 4, 1, 6]
     }, { //Cosmon
         name: [
             'More speed',
