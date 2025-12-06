@@ -1315,7 +1315,7 @@ export const global: globalType = {
             () => `Boost global speed again by ${format(1.4)}.`,
             () => `Boost Strange quarks gain from the Stage resets again by ${format(1.2)}.`,
             () => `First level removes all negative effects and time limit from 'Overboost' Inflation.\nFurther levels will instead increase its max level by +1 and improve its effect by +${format(0.25)}.`,
-            () => `Boost Strangelets gain from the Stage resets by ${format(1.4)} and increase max level of 'Strange gain' Inflation by +1.`,
+            () => `Boost Strangelets gain from the Stage resets by ${format(1.4)} and increase max level of 'Strange gain' Inflation by +1. Best upgrade in the game`,
             () => `True Vacuum only, gain +1 free Goals and decrease requirement scaling by -${format(0.5)} with every level.\nAlso improve Discharge base by +${format(0.5)} (before the softcap), but only inside any Void.`,
             () => "True Vacuum only, make 'Natural Vaporization' Clouds Research old effect permanent and replace it with auto Vaporization level 2 (it itself will now increase strength by 4), second level will increase its max level by +3, third level will unlock a new Research for 'Galactic tide' Strangeness.\nFinal level will increase max level of 'Ocean world' Strangeness and remove the 'no Rank resets' condition from the Void rewards.\nAlso decrease required Drops for a Cloud by 5 per level if inside any Void.",
             () => `True Vacuum only, make effective Rank boost even more: (all effects are per Rank)\n+${format(0.5)} Discharge goals at level 1, +1 to max level of 'Planetary system' Interstellar Research at level 2 and ${format(1.01)}x to the Solar mass gain at level 3.\nFinal level will instead increase max level of 'Rank raise' Strangeness and improve auto Rank level 2 by making it not reset anything.\nAlso increase effective Rank by +1 per level if inside any Void.`,
@@ -1334,7 +1334,7 @@ export const global: globalType = {
         cost: [],
         firstCost: [1, 1, 2, 2, 0, 1, 2, 6, 2, 6],
         scaling: [1, 1, 1.5, 1.5, 1, 2.4, 2.4, 3.4, 2.4, 3],
-        max: [9, 9, 3, 8, 4, 4, 4, 3, 4, 3]
+        max: [9, 9, 10, 80, 4, 4, 4, 3, 4, 3]
     }],
     milestonesInfo: [
         {} as globalType['milestonesInfo'][0], { //Stage 1
