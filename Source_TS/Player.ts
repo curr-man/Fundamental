@@ -1333,7 +1333,7 @@ export const global: globalType = {
         ],
         cost: [],
         firstCost: [1, 1, 2, 2, 0, 1, 2, 6, 2, 6],
-        scaling: [1, 1, 1.5, 1.5, 1, 2.4, 2.4, 3.4, 2.4, 3],
+        scaling: [1, 1, 1.5, 0.25, 1, 2.4, 2.4, 3.4, 2.4, 3],
         max: [9, 9, 10, 80, 4, 4, 4, 3, 4, 3]
     }],
     milestonesInfo: [
