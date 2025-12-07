@@ -1267,7 +1267,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [2e16, 4e16, 6e16, 5e15],
             scaling: [4, 4, 6, 16],
-            max: [9, 9, 6, 5],
+            max: [50, 50, 6, 5],
             maxActive: 0
         }
     ],
@@ -1296,7 +1296,7 @@ export const global: globalType = {
         ],
         cost: [],
         firstCost: [0, 1, 1, 2, 4, 1],
-        scaling: [2, 0.1, 0.1, 0.1, 0, 0.1],
+        scaling: [0.1, 0.1, 0.1, 0.1, 0, 0.1],
         max: [2, 15, 15, 10, 1, 5]
     }, { //Cosmon
         name: [
