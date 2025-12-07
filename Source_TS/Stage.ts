@@ -854,7 +854,7 @@ export const assignBuildingsProduction = {
         stageBoost[2] = strangeQuarks ** (vacuum ? 0.22 : 0.18);
         stageBoost[3] = strangeQuarks ** (vacuum ? 0.68 : 0.76);
         stageBoost[4] = strangeQuarks ** (iron ? 0.32 : 0.16);
-        stageBoost[5] = strangeQuarks ** 0.06;
+        stageBoost[5] = strangeQuarks ** 0.07;
     },
     /** Strangelets */
     strange1: () => {
