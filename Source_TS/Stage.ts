@@ -227,7 +227,7 @@ export const calculateEffects: calculateEffectsType = {
         if (effect > 1e4) { effect = (effect - 1e4) ** 0.7 + 1e4; }
         return effect;
     },
-    cloudsGain: () => player.challenges.active === 0 ? 0.4 : player.inflation.vacuum ? 0.5 : 0.6,
+    cloudsGain: () => player.challenges.active === 0 ? 0.4 : player.inflation.vacuum ? 0.7 : 0.8,
     S2Upgrade1: () => {
         const puddles = player.buildings[2][2];
         const maxTrue = Math.min(puddles.true, 200);
@@ -401,7 +401,7 @@ export const calculateEffects: calculateEffectsType = {
             return calculateEffects.S5Extra2(level, post) / calculateEffects.S5Extra2(player.researchesExtra[5][2], post);
         }
     ],
-    groupsCost: () => 50 - calculateEffects.S5Extra4(),
+    groupsCost: () => 31 - calculateEffects.S5Extra4(),
     mergeScore: () => global.mergeInfo.galaxies + (player.merge.rewards[0] * 2) + (player.merge.rewards[1] * 4),
     S5Upgrade0: () => 3 * ((player.inflation.vacuum ? 1.6 : 1.8) ** player.strangeness[5][1]),
     S5Upgrade1: () => 2 * ((player.inflation.vacuum ? 1.6 : 1.8) ** player.strangeness[5][1]),
@@ -861,8 +861,8 @@ export const assignBuildingsProduction = {
         const information = global.strangeInfo.strangeletsInfo;
         const strangelets = player.strange[1].current;
 
-        information[0] = (Math.log2(strangelets + 2) - 1) / 100;
-        information[1] = strangelets ** 0.4 / 80 + 1;
+        information[0] = (Math.log2(strangelets + 2) - 1);
+        information[1] = strangelets ** 0.5 / 80 + 1;
     }
 };
 
