@@ -861,7 +861,7 @@ export const assignBuildingsProduction = {
         const information = global.strangeInfo.strangeletsInfo;
         const strangelets = player.strange[1].current;
 
-        information[0] = (Math.log2(strangelets + 2) ** 1.1 - 1);
+        information[0] = (Math.log2(strangelets + 2) - 1);
         information[1] = strangelets ** 0.5 / 80 + 1;
     }
 };
