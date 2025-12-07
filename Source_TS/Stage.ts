@@ -184,7 +184,7 @@ export const calculateEffects: calculateEffectsType = {
     dischargeScaling: (research = player.researches[1][3], strangeness = player.strangeness[1][2]) => {
         let scale = (2 * research) + (strangeness / 2);
         if (player.inflation.vacuum) { scale += player.tree[1][4] / 2; }
-        return 10 - scale;
+        return 9.25 - scale;
     },
     dischargeCost: (scaling = calculateEffects.dischargeScaling()) => {
         let next = scaling ** player.discharge.current;
@@ -327,8 +327,8 @@ export const calculateEffects: calculateEffectsType = {
     massGain: () => {
         const elements = player.elements;
 
-        let massGain = 0.004;
-        if (elements[3] >= 1) { massGain += 0.002; }
+        let massGain = 0.04;
+        if (elements[3] >= 1) { massGain += 0.02; }
         if (elements[5] >= 1) { massGain += 0.0002 * player.buildings[4][1].true; }
         massGain *= elements[15] >= 1 ? global.collapseInfo.trueStars : player.buildings[4][1].true;
         if (player.inflation.vacuum) {
