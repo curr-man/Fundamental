@@ -993,7 +993,7 @@ export const assignResetInformation = {
     },
     /** Interstellar only, also assigns related cache */
     quarksGain: () => {
-        let multiplier = global.mergeInfo.galaxies + 1;
+        let multiplier = (global.mergeInfo.galaxies + 1) * 2;
         if (player.inflation.vacuum) { multiplier *= calculateEffects.S5Extra2(player.researchesExtra[5][2] + player.merge.rewards[1]) * (calculateEffects.S2Strange9() ** player.strangeness[2][9]); }
         effectsCache.interstellarQuarks = multiplier;
 
