@@ -227,7 +227,7 @@ export const calculateEffects: calculateEffectsType = {
         if (effect > 1e4) { effect = (effect - 1e4) ** 0.7 + 1e4; }
         return effect;
     },
-    cloudsGain: () => player.challenges.active === 0 ? 0.4 : player.inflation.vacuum ? 0.7 : 0.8,
+    cloudsGain: () => player.challenges.active === 0 ? 0.4 : player.inflation.vacuum ? 0.6 : 0.5,
     S2Upgrade1: () => {
         const puddles = player.buildings[2][2];
         const maxTrue = Math.min(puddles.true, 200);
