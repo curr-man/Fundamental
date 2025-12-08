@@ -877,9 +877,9 @@ export const assignResetInformation = {
             energyType[4] = [0, 80, 160, 240, 320, 400];
             energyType[5] = [0, 400, 400, 2000];
 
-            energyType[1][1] += player.strangeness[1][7] * 2;
+            energyType[1][1] += player.strangeness[1][7] * 5;
             if (player.strangeness[5][10] >= 1) { energyType[5][3] *= 5; }
-        } else { energyType[1] = [0, 1, 5, 20]; }
+        } else { energyType[1] = [0, 3, 5, 20]; }
 
         let energyTrue = 0;
         for (let s = 1; s < (player.inflation.vacuum ? 6 : 2); s++) {
