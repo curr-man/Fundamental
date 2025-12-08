@@ -329,7 +329,7 @@ export const calculateEffects: calculateEffectsType = {
 
         let massGain = 0.04;
         if (elements[3] >= 1) { massGain += 0.02; }
-        if (elements[5] >= 1) { massGain += 0.0002 * player.buildings[4][1].true; }
+        if (elements[5] >= 1) { massGain += 0.002 * player.buildings[4][1].true; }
         massGain *= elements[15] >= 1 ? global.collapseInfo.trueStars : player.buildings[4][1].true;
         if (player.inflation.vacuum) {
             massGain = (massGain * (player.challenges.active === 0 ? 48 : 96)) + 1;
@@ -981,7 +981,7 @@ export const assignResetInformation = {
             Math.floor(global.mergeInfo.galaxies / requirement) - player.merge.rewards[0] :
             researchesExtra[1] >= 1 ? Math.floor(player.buildings[5][3].true / requirement) - player.merge.claimed[0] : 0;
         rewardCheck[1] = researchesExtra[5] >= 2 ?
-            Math.floor(global.mergeInfo.galaxies / 100) - player.merge.rewards[1] :
+            Math.floor(global.mergeInfo.galaxies / 27) - player.merge.rewards[1] :
             researchesExtra[5] >= 1 ? Math.floor(player.buildings[5][3].true / 100) - player.merge.claimed[1] : 0;
     },
     newFluid: (): number => {
