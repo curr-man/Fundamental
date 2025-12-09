@@ -519,7 +519,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1600, 4800, 16000, 32000, 16000, 24000],
             scaling: [300, 1000, 6000, 30000, 12000, 12000],
-            max: [4, 7, 8, 2, 3, 4],
+            max: [4, 6, 8, 2, 3, 4],
             maxActive: 6
         }, { //Stage 2
             name: [
@@ -692,7 +692,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [2000, 40000, 12000, 16000, 160000, 1.6e6],
             scaling: [0, 16000, 68000, 16000, 0, 1.6e6],
-            max: [1, 3, 2, 2, 1, 2],
+            max: [1, 2, 2, 2, 1, 2],
             maxActive: 0
         }, { //Stage 2
             name: [
@@ -729,7 +729,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1e18, 1e12, 1e26, 1e14, 1e60],
             scaling: [1e8, 1e3, 1e13, 1e8, 1e8],
-            max: [1, 5, 1, 3, 3],
+            max: [1, 4, 1, 3, 3],
             maxActive: 3
         }, { //Stage 3
             name: [
