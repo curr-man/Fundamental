@@ -225,6 +225,7 @@ export const calculateEffects: calculateEffectsType = {
         if (post) { effect += global.vaporizationInfo.get; }
 
         if (effect > 1e4) { effect = (effect - 1e4) ** 0.7 + 1e4; }
+        if (effect > 1e100) { effect = 1e100; }
         return effect;
     },
     cloudsGain: () => player.challenges.active === 0 ? 0.4 : player.inflation.vacuum ? 0.6 : 0.5,
