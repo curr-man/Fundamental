@@ -561,6 +561,7 @@ export const assignBuildingsProduction = {
         let multiplier = 0.2 * effectsCache.microworld * player.buildings[1][index].current.toNumber() * (effectsCache.S1Upgrade7 ** player.buildings[1][index].true);
         if (player.upgrades[1][4] === 1) { multiplier *= 4; }
         if (visual) { global.buildingsInfo.producing[1][index].setValue(multiplier); }
+        if (multiplier > 1e225) {multiplier = 1e225;}
         return multiplier;
     },
     /* Tritium */
