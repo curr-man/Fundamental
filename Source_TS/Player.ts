@@ -321,8 +321,8 @@ export const global: globalType = {
             [0, 1.1, 1.1, 1.25, 1.35, 1.4, 4],
             [0, 1.075, 1.25, 1.35, 10, 10],
             [0, 1.25, 1.4, 1.55, 1.70, 1.85],
-            [0, 2.5, 2.5, 1.1],
-            [0, 1.4]
+            [0, 4, 4, 1.1],
+            [0, 1.2]
         ],
         producing: [[]] as unknown as globalType['buildingsInfo']['producing']
     },
