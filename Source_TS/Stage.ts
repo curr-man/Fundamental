@@ -571,7 +571,6 @@ export const assignBuildingsProduction = {
         multiplier = logAny(multiplier, calculateEffects.S1Extra1()) * (calculateEffects.S1Research2() ** player.researches[1][2]) * (calculateEffects.S1Research5() ** player.researches[1][5]);
         if (player.upgrades[1][9] === 1) { multiplier *= calculateEffects.S1Upgrade9(); }
         if (player.inflation.vacuum) { multiplier *= assignBuildingsProduction.S2Build1(); }
-         if (multiplier > 1e250) { multiplier = 1e250; }
         return (effectsCache.tritium = multiplier);
     },
     /** Reset being false will set all levels to 0, true will recalculate them afterwards */
