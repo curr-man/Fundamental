@@ -1138,7 +1138,7 @@ export const buyBuilding = (index: number, stageIndex: number, howMany = player.
         }
     } else if (stageIndex === 5 && index === 3) {
         global.mergeInfo.galaxies += afford;
-        reset('galaxy', player.inflation.vacuum ? [1, 2, 3, 4, 5] : [4, 5]);
+        reset('galaxy', player.inflation.vacuum ? [2] : [4, 5]);
         calculateMaxLevel(0, 4, 'researches');
         calculateMaxLevel(1, 4, 'researches');
         calculateMaxLevel(2, 4, 'researches');

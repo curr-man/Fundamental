@@ -322,7 +322,7 @@ export const global: globalType = {
             [0, 1.075, 1.25, 1.35, 10, 10],
             [0, 1.25, 1.4, 1.55, 1.70, 1.85],
             [0, 4, 4, 1.1],
-            [0, 1.2]
+            [0, 1.4]
         ],
         producing: [[]] as unknown as globalType['buildingsInfo']['producing']
     },
@@ -786,7 +786,7 @@ export const global: globalType = {
                 'Interacting Groups'
             ],
             effectText: [
-                () => `Super dense core which will allow creation of a new Structure. That Structure will increase Stage reset reward${player.inflation.vacuum ? ', starting Energy after any Reset' : ''}, boost Nebulas and Star clusters. But creating it will fully reset ${player.inflation.vacuum ? 'all' : 'Interstellar and Intergalactic'} Stages.\nThis Research also removes Solar mass and other Remnant requirements from everything in the Interstellar Stage.`,
+                () => `Super dense core which will allow creation of a new Structure. That Structure will increase Stage reset reward${player.inflation.vacuum ? ', starting Energy after any Reset' : ''}, boost Nebulas and Star clusters. But creating it will fully reset ${player.inflation.vacuum ? 'just submerged because we did not need it anyways' : 'Interstellar and Intergalactic'} Stages.\nThis Research also removes Solar mass and other Remnant requirements from everything in the Interstellar Stage.`,
                 () => `Unlock a new Result for the Merge resets, if to reset with enough self-made Galaxies.${global.researchesExtraInfo[5].max[1] > 1 ? '\nSecond level will allow the use of the excess Galaxies from previous Merge resets when forming new Galaxy groups.' : ''}${visualUniverseLevels(4)}`,
                 () => { //[2]
                     const maxLevel = player.researchesExtra[5][2] + player.merge.rewards[1];
@@ -1287,7 +1287,7 @@ export const global: globalType = {
                 return `Boost global speed by unspent Dark matter ^${format((effect > 1 ? logAny(effect, player.buildings[6][0].current.toNumber() + 1) : 0.04) * player.tree[0][1], { padding: true })}.\n(Boost per level: ${format(effect, { padding: true })}, softcaps after ${format(1e8)} Dark matter)`;
             },
             () => `Gain ${format(1.4)} times more Strange quarks from any Stage reset per level.${player.tree[0][3] >= 1 ? `\nFirst ${player.tree[0][3] * 2} levels will also boost global speed by ${format(1.2)}, but only while inside any Void.` : ''}`,
-            () => `Boost global speed and Stage reset reward by ${format(calculateEffects.T0Inflation3())}, strength is based on Supervoid progress${player.challenges.stability < 3 ? ' in the current Universe' : ''}.\nEvery level will also improve 2 levels of 'Strange gain' Inflation to boost global speed while inside any Void.`,
+            () => `Boost global speed and Stage reset reward by ${format(calculateEffects.T0Inflation3())}, strength is based on Supervoid progress${player.challenges.stability < 3 ? ' in the current Universe' : ''}.\nEvery level will also improve 2 levels of 'Strange gain' Inflation to boost global speed while inside any Void. (Have fun trying to max this)`,
             () => 'For false Vacuum it will remove time limit from Milestones.\nFor true Vacuum it will unlock Void Milestones. Their effects are active, only when this Inflation is active.',
             () => {
                 const level = player.tree[0][5];
@@ -1297,7 +1297,7 @@ export const global: globalType = {
         cost: [],
         firstCost: [0, 1, 1, 2, 4, 1],
         scaling: [0.1, 0.1, 0.1, 0.1, 0, 0.1],
-        max: [2, 15, 15, 10, 1, 5]
+        max: [2, 15, 15, 250, 1, 5]
     }, { //Cosmon
         name: [
             'More speed',
@@ -1333,8 +1333,8 @@ export const global: globalType = {
         ],
         cost: [],
         firstCost: [1, 1, 2, 2, 0, 1, 2, 6, 2, 6],
-        scaling: [1, 1, 1.5, 0.05, 1, 2.4, 2.4, 3.4, 2.4, 3],
-        max: [9, 9, 10, 80, 4, 4, 4, 3, 4, 3]
+        scaling: [1, 1, 1.5, 0.05, 1, 2.4, 2.4, 3.4, 2.4, 0.1],
+        max: [9, 9, 10, 80, 4, 4, 4, 3, 4, 10]
     }],
     milestonesInfo: [
         {} as globalType['milestonesInfo'][0], { //Stage 1
