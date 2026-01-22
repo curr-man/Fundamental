@@ -415,8 +415,8 @@ export const calculateEffects: calculateEffectsType = {
         if (!player.inflation.vacuum) { effect *= 2; }
         return effect;
     },
-    S5Research2: () => 1 + player.researches[5][2] / 320,
-    S5Research3: () => 1 + player.researches[5][3] / 320,
+    S5Research2: () => 1 + player.researches[5][2] / 160,
+    S5Research3: () => 1 + player.researches[5][3] / 160,
     S5Extra2: (level, post = false) => {
         let groups = player.merge.rewards[0];
         if (post) { groups += global.mergeInfo.checkReward[0]; }

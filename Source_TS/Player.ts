@@ -636,7 +636,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [1e54, 1e58, 1e270, 1e280, '1e550'] as unknown as Overlimit[],
             scaling: [1e8, 1e8, 1e30, 1e30, 1e30],
-            max: [4, 4, 1, 1, 4],
+            max: [4, 4, 2, 2, 4],
             maxActive: 2
         }, { //Stage 6
             name: [
