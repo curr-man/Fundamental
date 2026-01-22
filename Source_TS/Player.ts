@@ -1297,7 +1297,7 @@ export const global: globalType = {
         cost: [],
         firstCost: [0, 1, 1, 2, 4, 1],
         scaling: [0.1, 0.1, 0.1, 0.1, 0, 0.1],
-        max: [2, 15, 15, 250, 1, 5]
+        max: [2, 15, 15, 25, 1, 5]
     }, { //Cosmon
         name: [
             'More speed',
