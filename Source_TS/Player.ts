@@ -629,14 +629,14 @@ export const global: globalType = {
                     for (let i = 1; i < player.researches[5][1] + 1; i++) { unlocks += `, ${names[max - i]}`; }
                     return `More of the same Star type will be found within Star cluster. Star clusters and their minimum strength will be improved by 2. It will also boost Stars of lower tier, but 2 times less than the previous one.\nNext tier will be ${names[Math.max(max - player.researches[5][1] - 1, 1)]}. Currently can boost: ${unlocks}.`;
                 },
-                () => `Weaken internal gas pressure within Nebulas to cause even more gravitational Collapses.\nThis will make every self-made Nebula boost each other by ${format(calculateEffects.S5Research2(), { padding: true })}. (+${format(0.00625)} per level)${visualUniverseLevels(4, 5)}`,
-                () => `Increase the Energy required for Star clusters to cease being in a gravitationally bound state.\nThis will make every self-made Star cluster boost each other by ${format(calculateEffects.S5Research3(), { padding: true })}. (+${format(0.00625)} per level)${visualUniverseLevels(4, 5)}`,
+                () => `Weaken internal gas pressure within Nebulas to cause even more gravitational Collapses.\nThis will make every self-made Nebula boost each other by ${format(calculateEffects.S5Research2(), { padding: true })}. (+${format(0.003125)} per level)${visualUniverseLevels(4, 5)}`,
+                () => `Increase the Energy required for Star clusters to cease being in a gravitationally bound state.\nThis will make every self-made Star cluster boost each other by ${format(calculateEffects.S5Research3(), { padding: true })}. (+${format(0.003125)} per level)${visualUniverseLevels(4, 5)}`,
                 () => `Produce even more stars and increase strength of 'Starburst region', 'Globular cluster' and 'Starburst Galaxy' effects by 10 per level.${visualUniverseLevels(7)}`
             ],
             cost: [],
             firstCost: [1e54, 1e58, 1e270, 1e280, '1e550'] as unknown as Overlimit[],
             scaling: [1e8, 1e8, 1e30, 1e30, 1e30],
-            max: [4, 4, 2, 2, 4],
+            max: [4, 4, 1, 1, 4],
             maxActive: 2
         }, { //Stage 6
             name: [
