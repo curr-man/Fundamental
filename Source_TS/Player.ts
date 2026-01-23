@@ -979,7 +979,7 @@ export const global: globalType = {
             () => `An oxidizing agent that will make Interstellar Stars cost scale even slower. (-${format(0.05)} less)`,
             () => "Highly toxic and reactive, +12 to max level of 'Planetary system'.",
             () => `A noble 2x boost to the Solar mass gain${player.inflation.vacuum ? ' and delay to the Preons hardcap' : ''}.`,
-            () => "Through leaching will increase max level of 'Protoplanetary disk' by +1.",
+            () => "Through leaching will increase max level of 'Protoplanetary disk' by +9.",
             () => 'Stars are inside you, as well Neutron stars strength will be increased by log4.',
             () => 'Has a great affinity towards Oxygen and to decrease cost of all Stars by 100.',
             () => `Just another tetravalent metalloid, and so is another ${format(1.4)}x boost to all Stars${player.inflation.vacuum ? ' and Cosmic dust' : ''}.`,
@@ -1201,7 +1201,7 @@ export const global: globalType = {
             effectText: [
                 () => `More matter for the Accretion (flavor text), first two Intergalactic Structures will be ${format(player.inflation.vacuum ? 1.4 : 1.6)} times stronger.`,
                 () => `With higher density, first two Intergalactic upgrades will be even stronger. Effects will be increased by ${format(player.inflation.vacuum ? 1.6 : 1.8)}.`,
-                () => `Gain ${format(1.4)} times more Strange quarks from any Stage reset.`,
+                () => `Gain ${format(1.0001)} times more Strange quarks from any Stage reset.`,
                 () => player.inflation.vacuum ? 'Unlock Intergalactic Stage and increase Strange quarks from Stage resets by +1.' : `Make Intergalactic Stage immune to Collapse reset${player.verses[0].current < 3 ? " and allow 'Upgrade automatization' to work within the Intergalactic Stage" : ''}.`,
                 () => 'Automatically Collapse if able to afford a new Galaxy and auto Galaxy is enabled.\n(Also unlocks permanent auto Galaxies for free and removes Mass limit for auto Collapse points)',
                 () => `Make auto for ${player.strangeness[5][4] >= 1 ? 'all' : 'the first two'} Intergalactic Structures permanent${player.strangeness[5][4] < 1 ? ' and prevent the rest from resetting' : ''}.`,

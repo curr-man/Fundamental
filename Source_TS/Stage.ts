@@ -359,9 +359,9 @@ export const calculateEffects: calculateEffectsType = {
     S4Research1: (level = player.researches[4][1], transfer = player.researchesExtra[4][1]) => {
         if (level <= 0) { return 1; }
         return 1 + (transfer >= 1 ? 0.006 : 0.005) * (
-            level >= 12 ? (level + 93) / 24 :
-            level >= 8 ? (level + 41) / 12 :
-            level >= 6 ? (level + 17) / 10 :
+            level >= 12 ? (level + 93) / 20 :
+            level >= 8 ? (level + 41) / 10 :
+            level >= 6 ? (level + 17) / 5.5 :
             level >= 5 ? 5.5 : 1 + level
         );
     },
@@ -461,7 +461,7 @@ export const calculateEffects: calculateEffectsType = {
             base = (base + effectsCache.element26) * effectsCache.interstellarQuarks;
         }
         if (quarks) {
-            base *= (1.4 ** player.strangeness[5][2]) * (1.4 ** player.tree[0][2]) * (1.2 ** player.tree[1][1]);
+            base *= (1.0001 ** player.strangeness[5][2]) * (1.4 ** player.tree[0][2]) * (1.2 ** player.tree[1][1]);
             if (player.challenges.active === 1) {
                 const completions = player.challenges.stability;
                 base /= 2 ** Math.max(player.stage.resets + completions - 8, 0) * 2 ** completions;
@@ -1874,7 +1874,7 @@ export const calculateMaxLevel = (research: number, stageIndex: number, type: 'r
                 if (player.elements[31] >= 1) { max++; }
                 if (player.elements[34] >= 1) { max++; }
             } else if (research === 2) {
-                max = player.elements[11] >= 1 ? 2 : 1;
+                max = player.elements[11] >= 1 ? 10 : 1;
             } else if (research === 5) {
                 max = player.elements[35] >= 1 ? 2 : 1;
             }
@@ -1994,7 +1994,7 @@ export const calculateMaxLevel = (research: number, stageIndex: number, type: 'r
             if (research === 0 || research === 1) {
                 max = player.strangeness[6][2] >= 6 ? 9 : 8;
             } else if (research === 2) {
-                max = 2;
+                max = 999996;
                 if (player.inflation.vacuum) { max += Math.min(player.challenges.void[3], 4); }
             } else if (research === 6) {
                 max = !player.inflation.vacuum && (player.milestones[5][0] >= 8 || player.verses[0].current >= 5) ? 2 : 1;
