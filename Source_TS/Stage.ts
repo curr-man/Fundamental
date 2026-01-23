@@ -359,9 +359,9 @@ export const calculateEffects: calculateEffectsType = {
     S4Research1: (level = player.researches[4][1], transfer = player.researchesExtra[4][1]) => {
         if (level <= 0) { return 1; }
         return 1 + (transfer >= 1 ? 0.006 : 0.005) * (
-            level >= 12 ? (level + 93) / 32 :
-            level >= 8 ? (level + 41) / 16 :
-            level >= 6 ? (level + 17) / 8 :
+            level >= 12 ? (level + 93) / 24 :
+            level >= 8 ? (level + 41) / 12 :
+            level >= 6 ? (level + 17) / 10 :
             level >= 5 ? 5.5 : 1 + level
         );
     },
