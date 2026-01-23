@@ -1983,7 +1983,7 @@ export const calculateMaxLevel = (research: number, stageIndex: number, type: 'r
                 max = player.strangeness[6][2] >= 3 ? 8 : 4;
                 if (player.inflation.vacuum) { max += Math.min(player.challenges.void[3], 4); }
             } else if (research === 3) {
-                max = player.inflation.vacuum && player.challenges.supervoid[4] >= 3 ? 6 : 2;
+                max = player.inflation.vacuum && player.challenges.supervoid[4] >= 3 ? 25 : 2;
             } else if (research === 4) {
                 max = player.inflation.vacuum && player.challenges.void[4] >= 1 ? 2 : 1;
                 if (player.strangeness[6][2] >= 1) { max++; }
