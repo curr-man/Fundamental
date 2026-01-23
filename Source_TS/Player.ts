@@ -1201,7 +1201,7 @@ export const global: globalType = {
             effectText: [
                 () => `More matter for the Accretion (flavor text), first two Intergalactic Structures will be ${format(player.inflation.vacuum ? 1.4 : 1.6)} times stronger.`,
                 () => `With higher density, first two Intergalactic upgrades will be even stronger. Effects will be increased by ${format(player.inflation.vacuum ? 1.6 : 1.8)}.`,
-                () => `Gain ${format(1.0001)} times more Strange quarks from any Stage reset.`,
+                () => `Gain ${format(1.05)} times more Strange quarks from any Stage reset.`,
                 () => player.inflation.vacuum ? 'Unlock Intergalactic Stage and increase Strange quarks from Stage resets by +1.' : `Make Intergalactic Stage immune to Collapse reset${player.verses[0].current < 3 ? " and allow 'Upgrade automatization' to work within the Intergalactic Stage" : ''}.`,
                 () => 'Automatically Collapse if able to afford a new Galaxy and auto Galaxy is enabled.\n(Also unlocks permanent auto Galaxies for free and removes Mass limit for auto Collapse points)',
                 () => `Make auto for ${player.strangeness[5][4] >= 1 ? 'all' : 'the first two'} Intergalactic Structures permanent${player.strangeness[5][4] < 1 ? ' and prevent the rest from resetting' : ''}.`,
@@ -1233,8 +1233,8 @@ export const global: globalType = {
             ],
             cost: [],
             firstCost: [24, 36, 4, 24, 15600, 24, 480, 120, 6000, 6e6, 1.2e7],
-            scaling: [2, 2, 1.1, 1, 1, 1, 1, 1, 1, 1e12, 3],
-            max: [8, 8, 50, 1, 1, 1, 1, 1, 1, 1, 3],
+            scaling: [2, 2, 3, 1, 1, 1, 1, 1, 1, 1e12, 3],
+            max: [8, 8, 4, 1, 1, 1, 1, 1, 1, 1, 3],
             maxActive: 8
         }, { //Stage 6
             name: [

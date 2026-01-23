@@ -461,7 +461,7 @@ export const calculateEffects: calculateEffectsType = {
             base = (base + effectsCache.element26) * effectsCache.interstellarQuarks;
         }
         if (quarks) {
-            base *= (1.0001 ** player.strangeness[5][2]) * (1.4 ** player.tree[0][2]) * (1.2 ** player.tree[1][1]);
+            base *= (1.05 ** player.strangeness[5][2]) * (1.4 ** player.tree[0][2]) * (1.2 ** player.tree[1][1]);
             if (player.challenges.active === 1) {
                 const completions = player.challenges.stability;
                 base /= 2 ** Math.max(player.stage.resets + completions - 8, 0) * 2 ** completions;
