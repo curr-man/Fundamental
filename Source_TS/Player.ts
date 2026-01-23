@@ -656,7 +656,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [4e5, 2e8, 1e9, 4e9, 1e16],
             scaling: [2, 2, 2, 3, 16],
-            max: [10, 14, 9, 5, 4],
+            max: [10, 14, 9, 5, 5],
             maxActive: 0
         }
     ],
@@ -824,7 +824,7 @@ export const global: globalType = {
             cost: [],
             firstCost: [25, 50, 100, 100],
             scaling: [25, 50, 100, 200],
-            max: [4, 2, 8, 4],
+            max: [4, 2, 8, 6],
             maxActive: 0
         }
     ],
