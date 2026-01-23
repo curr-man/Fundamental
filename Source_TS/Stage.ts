@@ -359,9 +359,9 @@ export const calculateEffects: calculateEffectsType = {
     S4Research1: (level = player.researches[4][1], transfer = player.researchesExtra[4][1]) => {
         if (level <= 0) { return 1; }
         return 1 + (transfer >= 1 ? 0.006 : 0.005) * (
-            level >= 12 ? (level + 93) / 16 :
-            level >= 8 ? (level + 41) / 8 :
-            level >= 6 ? (level + 17) / 4 :
+            level >= 12 ? (level + 93) / 32 :
+            level >= 8 ? (level + 41) / 16 :
+            level >= 6 ? (level + 17) / 8 :
             level >= 5 ? 5.5 : 1 + level
         );
     },
@@ -415,8 +415,8 @@ export const calculateEffects: calculateEffectsType = {
         if (!player.inflation.vacuum) { effect *= 2; }
         return effect;
     },
-    S5Research2: () => 1 + player.researches[5][2] / 160,
-    S5Research3: () => 1 + player.researches[5][3] / 160,
+    S5Research2: () => 1 + player.researches[5][2] / 320,
+    S5Research3: () => 1 + player.researches[5][3] / 320,
     S5Extra2: (level, post = false) => {
         let groups = player.merge.rewards[0];
         if (post) { groups += global.mergeInfo.checkReward[0]; }
