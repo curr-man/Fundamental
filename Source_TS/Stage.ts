@@ -853,7 +853,7 @@ export const assignBuildingsProduction = {
         const strangeQuarks = player.strange[0].current + 1;
 
         stageBoost[1] = strangeQuarks ** (vacuum ? 0.26 : 0.22);
-        stageBoost[2] = strangeQuarks ** (vacuum ? 0.2 : 0.18);
+        stageBoost[2] = strangeQuarks ** (vacuum ? 0.2 : 0.1);
         stageBoost[3] = strangeQuarks ** (vacuum ? 0.68 : 0.76);
         stageBoost[4] = strangeQuarks ** (iron ? 0.32 : 0.16);
         stageBoost[5] = strangeQuarks ** 0.07;

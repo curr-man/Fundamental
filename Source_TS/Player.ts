@@ -1035,7 +1035,7 @@ export const global: globalType = {
                 () => `Obtain +${format(0.5)} bonus Discharge goals.`,
                 () => `Automatically Discharge upon reaching next goal or spending Energy. (Needs to be enabled in Settings)${global.strangenessInfo[1].max[4] > 1 ? '\nSecond level will make Discharge goals to be based on true Energy and without needing to reset.' : ''}`,
                 () => 'Make auto for all Microworld Structures permanent.',
-                () => `Unspent Strange quarks will boost Microworld by improving its Structures.\n(Formula: Strange quarks ^${format(player.inflation.vacuum ? 0.26 : 0.22)} | Effect: ${format(global.strangeInfo.stageBoost[1], { padding: true })})`,
+                () => `Unspent Strange quarks will boost Microworld by improving its Structures.\n(Formula: Strange quarks ^${format(player.inflation.vacuum ? 0.26 : 0.2)} | Effect: ${format(global.strangeInfo.stageBoost[1], { padding: true })})`,
                 () => 'Increase Energy gain from creating Preons by +5.',
                 () => { //[8]
                     const improved = player.challenges.supervoid[1] >= 2;
@@ -1074,7 +1074,7 @@ export const global: globalType = {
                 () => `Decrease amount of Drops required to get a Cloud by ${format(player.inflation.vacuum ? 2.5 : 2)}.`,
                 () => `Automatically Vaporize when reached enough boost from new Clouds. (Needs to be enabled in Settings)${global.strangenessInfo[2].max[4] > 1 ? `\nSecond level will unlock an automatic ${format(2.5)}% gain of Clouds per second${player.tree[1][5] >= 1 ? ' or if its already unlocked, then increase gain by 4' : ''}.${player.stage.true >= 7 ? ' (Not affected by global speed)' : ''}` : ''}`,
                 () => 'Make auto for all Submerged Structures permanent.',
-                () => `Unspent Strange quarks will boost Submerged by improving Puddles.\n(Formula: Strange quarks ^${format(player.inflation.vacuum ? 0.22 : 0.18)} | Effect: ${format(global.strangeInfo.stageBoost[2], { padding: true })})`,
+                () => `Unspent Strange quarks will boost Submerged by improving Puddles.\n(Formula: Strange quarks ^${format(player.inflation.vacuum ? 0.2 : 0.1)} | Effect: ${format(global.strangeInfo.stageBoost[2], { padding: true })})`,
                 () => `Submerged Structures that improve other Submerged Structures will do it ${format(1.24)} times stronger.\n(Affected Structures are Ponds, Lakes, Seas and Oceans)`,
                 () => { //[8]
                     let extraText = 'none';
