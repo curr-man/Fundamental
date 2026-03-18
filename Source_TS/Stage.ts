@@ -1203,7 +1203,7 @@ export const calculateBuildingsCost = (index: number, stageIndex: number): Overl
         }
     } else if (stageIndex === 5) {
         if (index === 3) {
-            if (player.elements[32] >= 1) { increase -= 0.01; }
+            if (player.elements[32] >= 1) { increase -= 0.05; }
             if (player.challenges.active === 0) {
                 increase += 0.05;
             } else if (player.challenges.active === 1) {

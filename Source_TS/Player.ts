@@ -793,7 +793,7 @@ export const global: globalType = {
                     const trueLevel = global.mergeInfo.S5Extra2;
                     return `An even bigger Galaxy to improve Stage reset reward and Galaxy groups effect with every Galaxy group.\nEffective level is ${format(trueLevel, { padding: trueLevel !== maxLevel })}, will be ${trueLevel !== maxLevel ? "restored with more Stardust, this doesn't" : "set to 0 after any reset, this won't"} affect Stage reset reward.\n(Total boost: ${format(calculateEffects.S5Extra2(trueLevel), { padding: true })} ⟶ ${format(calculateEffects.S5Extra2(maxLevel + (maxLevel === trueLevel ? 1 : 0)), { padding: true })})${visualUniverseLevels(5)}`;
                 },
-                () => `Increase max allowed Merge resets by +1 per level.${visualUniverseLevels(5, 9, 11)}`,
+                () => `Increase max allowed Merge resets by +1 per level.${visualUniverseLevels(5, 9, 11, 13, 15)}`,
                 () => `Decrease amount of Galaxies required for the creation of a Galaxy Group.\n(Effect: ${calculateEffects.S5Extra4()} ⟶ ${calculateEffects.S5Extra4(player.researchesExtra[5][4] + 1)}, effect increase per level decreases with more level)${visualUniverseLevels(8, 10)}`,
                 () => `Unlock the second Merge result${global.researchesExtraInfo[5].max[5] > 1 ? ' and it make able to use excess Galaxies at level 2' : ''}${visualUniverseLevels(10)}.`
             ],
@@ -1000,7 +1000,7 @@ export const global: globalType = {
             () => `Does not need to be prepared to increase Stage reset reward base by Arithmetic progression with step of ${format(0.01)}.`,
             () => `First of new Elements to come, increases max allowed Merge resets by +1 for every new Element past '[29] Copper'${player.upgrades[4][5] === 1 ? ` until '${global.elementsInfo.name[29 + player.verses[0].true]}'` : ''}.\n(Currently highest created Element in the current Stage reset is '${global.elementsInfo.name[player.collapse.maxElement]}', equals to +${Math.max(Math.min(player.collapse.maxElement, 29 + player.verses[0].true) - 29, 0)} allowed Merges)`,
             () => "Will melt in the palm of your hand to increase max level of 'Star system' by +1.",
-            () => `Too late to appear, but it will make all Galaxies cost scale slower by ${format(-0.01)} anyway.`,
+            () => `Too late to appear, but it will make all Galaxies cost scale slower by ${format(-0.05)} anyway.`,
             () => 'Toxic enough to buff only Quasi-stars with Black holes effect.',
             () => "Capable of sensing an +1 increase to the max level of 'Star system'.",
             () => "The only liquid nonmetal to increase the max level of 'Inner Black hole' by +1.",
@@ -1332,8 +1332,8 @@ export const global: globalType = {
             () => `Get ${1 + player.inflation.ends[2] - player.inflation.ends[1]} extra Inflatons per level, this is equal to 1 + highest - lowest self-made Universes on End resets.`
         ],
         cost: [],
-        firstCost: [1, 1, 2, 2, 0, 1, 2, 6, 2, 6],
-        scaling: [1, 1, 1.5, 0.05, 1, 2.4, 2.4, 3.4, 2.4, 0.1],
+        firstCost: [1, 1, 1, 2, 0, 1, 2, 6, 2, 6],
+        scaling: [1, 1, 0.5, 0.05, 1, 2.4, 2.4, 3.4, 2.4, 0.1],
         max: [9, 9, 10, 80, 4, 4, 4, 3, 4, 10]
     }],
     milestonesInfo: [
