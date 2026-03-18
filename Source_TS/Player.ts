@@ -1491,7 +1491,7 @@ export const global: globalType = {
             ['Work in progress', 'Work in progress', 'Work in progress', 'Work in progress']
         ]],
         resetType: 'stage',
-        time: 3600,
+        time: 86400,
         color: 'darkviolet'
     }, {
         name: 'Vacuum stability',

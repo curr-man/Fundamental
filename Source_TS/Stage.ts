@@ -269,7 +269,7 @@ export const calculateEffects: calculateEffectsType = {
     S3Upgrade0: () => (101 + player.researches[3][1]) / 100,
     S3Upgrade1_power: (research = player.researchesExtra[3][3]) => (11 + research) / 100,
     S3Upgrade1: (power = calculateEffects.S3Upgrade1_power()) => Math.max((player.buildings[3][1].current.toNumber() * (player.buildings[3][1].true + 1)) ** power, 1),
-    S3Upgrade3: () => (204 + player.researches[3][4]) / 200, //1.02 + 0.005
+    S3Upgrade3: () => (204 + player.researches[3][4]) / 50, //1.005 + 0.005
     S3Research6: (level = player.researches[3][6]) => { //+^0.025 per level; Drops up to +^(0.025 / 3) after softcap
         const mass = new Overlimit(player.buildings[3][0].current).max(1);
         return Math.min(mass.toNumber(), 1e21) ** (level / 60) * mass.power(level / 120).toNumber();
@@ -1983,7 +1983,7 @@ export const calculateMaxLevel = (research: number, stageIndex: number, type: 'r
                 max = player.strangeness[6][2] >= 3 ? 8 : 4;
                 if (player.inflation.vacuum) { max += Math.min(player.challenges.void[3], 4); }
             } else if (research === 3) {
-                max = player.inflation.vacuum && player.challenges.supervoid[4] >= 3 ? 25 : 2;
+                max = player.inflation.vacuum && player.challenges.supervoid[4] >= 3 ? 10 : 2;
             } else if (research === 4) {
                 max = player.inflation.vacuum && player.challenges.void[4] >= 1 ? 2 : 1;
                 if (player.strangeness[6][2] >= 1) { max++; }
@@ -2993,7 +2993,7 @@ export const toggleSupervoid = (change = false) => {
 
 export const assignChallengeInformation = (index: number) => {
     let time = (index === 1 ? 7200 : //[1]
-        player.challenges.super ? 1200 : 3600) / (6 / (6 - player.tree[0][5])); //[0]
+        player.challenges.super ? 1200 : 86400) / (6 / (6 - player.tree[0][5])); //[0]
     if (player.tree[1][2] < 1 && player.tree[0][0] === 1) { time /= 4; }
     global.challengesInfo[index].time = time;
 };
