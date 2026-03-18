@@ -269,7 +269,7 @@ export const calculateEffects: calculateEffectsType = {
     S3Upgrade0: () => (101 + player.researches[3][1]) / 100,
     S3Upgrade1_power: (research = player.researchesExtra[3][3]) => (11 + research) / 100,
     S3Upgrade1: (power = calculateEffects.S3Upgrade1_power()) => Math.max((player.buildings[3][1].current.toNumber() * (player.buildings[3][1].true + 1)) ** power, 1),
-    S3Upgrade3: () => (204 + player.researches[3][4]) / 50, //1.005 + 0.005
+    S3Upgrade3: () => (204 + player.researches[3][4]) / 400, //1.005 + 0.005
     S3Research6: (level = player.researches[3][6]) => { //+^0.025 per level; Drops up to +^(0.025 / 3) after softcap
         const mass = new Overlimit(player.buildings[3][0].current).max(1);
         return Math.min(mass.toNumber(), 1e21) ** (level / 60) * mass.power(level / 120).toNumber();
