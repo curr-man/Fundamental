@@ -1899,7 +1899,7 @@ export const calculateMaxLevel = (research: number, stageIndex: number, type: 'r
             }
         } else if (stageIndex === 3) {
             if (research === 0) {
-                max = (player.strangeness[3][2] >= 1 ? 20 : 14) + Math.floor(50 * calculateEffects.effectiveRank());
+                max = (player.strangeness[3][2] >= 1 ? 20 : 14) + Math.floor(500 * calculateEffects.effectiveRank());
             } else if (research === 1) {
                 max = player.strangeness[3][2] >= 2 ? 8 : 6;
             } else if (research === 4) {
