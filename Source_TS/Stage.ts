@@ -666,7 +666,7 @@ export const assignBuildingsProduction = {
         const upgradesS3 = player.upgrades[3];
         const vacuum = player.inflation.vacuum;
 
-        let multiplier = (vacuum ? 2 : 8e-20) * (3 ** researchesS3[0]) * (2 ** researchesS3[3]) * (3 ** researchesS3[5]) * (1.00001 ** player.researchesExtra[3][0]) * (calculateEffects.S3Extra1() ** global.accretionInfo.effective) * (1.8 ** player.strangeness[3][0]);
+        let multiplier = (vacuum ? 2 : 8e-20) * (3 ** researchesS3[0]) * (2 ** researchesS3[3]) * (3 ** researchesS3[5]) * (1.001 ** player.researchesExtra[3][0]) * (calculateEffects.S3Extra1() ** global.accretionInfo.effective) * (1.8 ** player.strangeness[3][0]);
         if (vacuum) {
             multiplier *= calculateEffects.submersion();
             if (player.elements[4] >= 1) { multiplier *= 1.4; }
@@ -1899,7 +1899,7 @@ export const calculateMaxLevel = (research: number, stageIndex: number, type: 'r
             }
         } else if (stageIndex === 3) {
             if (research === 0) {
-                max = (player.strangeness[3][2] >= 1 ? 20 : 14) + Math.floor(10000 * calculateEffects.effectiveRank());
+                max = (player.strangeness[3][2] >= 1 ? 20 : 14) + Math.floor(50 * calculateEffects.effectiveRank());
             } else if (research === 1) {
                 max = player.strangeness[3][2] >= 2 ? 8 : 6;
             } else if (research === 4) {
