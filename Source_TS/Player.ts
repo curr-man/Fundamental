@@ -741,7 +741,7 @@ export const global: globalType = {
                 'Ablative armor'
             ],
             effectText: [
-                () => `Increase strength of Cosmic dust by another ${format(1.0000001)} per level. Max level is based on effective Rank.\n(Total increase: ${format(1.0000001 ** player.researchesExtra[3][0], { padding: true })})`,
+                () => `Increase strength of Cosmic dust by another ${format(1.00001)} per level. Max level is based on effective Rank.\n(Total increase: ${format(1.00001 ** player.researchesExtra[3][0], { padding: true })})`,
                 () => { //[1]
                     const base = calculateEffects.S3Extra1();
                     return `${player.inflation.vacuum ? 'Preons hardcap delay' : 'Mass production'} from Cosmic dust will be even bigger, current formula is ${format(base)} ^ effective Rank.\n(Total boost: ${format(base ** global.accretionInfo.effective, { padding: true })} ⟶ ${format(calculateEffects.S3Extra1(player.researchesExtra[3][1] + 1) ** global.accretionInfo.effective, { padding: true })})`;
