@@ -1024,7 +1024,7 @@ export const global: globalType = {
                 'Automatic Discharge',
                 'Auto Structures',
                 'Strange boost',
-                'Energy increase',
+                'Preon thing',
                 'Conservation of Mass',
                 'Conservation of Energy'
             ],
@@ -1477,7 +1477,7 @@ export const global: globalType = {
         ],
         rewardText: [[
             [],
-            ["'Energy increase' (Microworld)", "'Conservation of Mass' (Microworld)", "'Improved flow' (Submerged)"],
+            ["'preon thing' (Microworld)", "'Conservation of Mass' (Microworld)", "'Improved flow' (Submerged)"],
             ["'Mechanical spread' (Submerged)", "'Ocean world' (Submerged)", "'Galactic tide' (Intergalactic)"],
             ['Multiple max level increases', 'Multiple max level increases', 'Multiple max level increases', 'Multiple max level increases', "'Strange growth' (Intergalactic)", "'Automatic Merge' (Intergalactic)"],
             ['Max level increased for auto resets', "'Conservation of Energy' (Microworld)", "'Neutronium' (Interstellar)", "'Mass delay' (Accretion)", "'Newer Upgrade' (Interstellar)"],
