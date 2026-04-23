@@ -269,7 +269,7 @@ export const calculateEffects: calculateEffectsType = {
     S3Upgrade0: () => (101 + player.researches[3][1]) / 100,
     S3Upgrade1_power: (research = player.researchesExtra[3][3]) => (11 + research) / 100,
     S3Upgrade1: (power = calculateEffects.S3Upgrade1_power()) => Math.max((player.buildings[3][1].current.toNumber() * (player.buildings[3][1].true + 1)) ** power, 1),
-    S3Upgrade3: () => (202 + player.researches[3][4]) / 200, //1.005 + 0.005
+    S3Upgrade3: () => (201 + player.researches[3][4]) / 200, //1.005 + 0.005
     S3Research6: (level = player.researches[3][6]) => { //+^0.025 per level; Drops up to +^(0.025 / 3) after softcap
         const mass = new Overlimit(player.buildings[3][0].current).max(1);
         return Math.min(mass.toNumber(), 1e21) ** (level / 60) * mass.power(level / 120).toNumber();
@@ -666,7 +666,7 @@ export const assignBuildingsProduction = {
         const upgradesS3 = player.upgrades[3];
         const vacuum = player.inflation.vacuum;
 
-        let multiplier = (vacuum ? 2 : 8e-20) * (3 ** researchesS3[0]) * (2 ** researchesS3[3]) * (3 ** researchesS3[5]) * (1.005 ** player.researchesExtra[3][0]) * (calculateEffects.S3Extra1() ** global.accretionInfo.effective) * (1.8 ** player.strangeness[3][0]);
+        let multiplier = (vacuum ? 4 : 8e-17) * (3 ** researchesS3[0]) * (2 ** researchesS3[3]) * (3 ** researchesS3[5]) * (1.0005 ** player.researchesExtra[3][0]) * (calculateEffects.S3Extra1() ** global.accretionInfo.effective) * (1.8 ** player.strangeness[3][0]);
         if (vacuum) {
             multiplier *= calculateEffects.submersion();
             if (player.elements[4] >= 1) { multiplier *= 1.4; }
