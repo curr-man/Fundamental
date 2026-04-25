@@ -281,7 +281,7 @@ export const calculateEffects: calculateEffectsType = {
         if (player.strangeness[5][10] >= 3) { delay *= global.mergeInfo.galaxies / 100 + 1; }
         return delay;
     },
-    dustHardcap: () => (player.accretion.rank >= 5 ? 1e48 : 8e46) * calculateEffects.dustDelay(),
+    dustHardcap: () => (player.accretion.rank >= 5 ? 1e52 : 8e50) * calculateEffects.dustDelay(),
     mass: (post = false) => {
         let effect = player.collapse.mass;
         if (post && global.collapseInfo.newMass > effect) { effect = global.collapseInfo.newMass; }
@@ -666,7 +666,7 @@ export const assignBuildingsProduction = {
         const upgradesS3 = player.upgrades[3];
         const vacuum = player.inflation.vacuum;
 
-        let multiplier = (vacuum ? 4 : 8e-10) * (3 ** researchesS3[0]) * (2 ** researchesS3[3]) * (3 ** researchesS3[5]) * (1.0005 ** player.researchesExtra[3][0]) * (calculateEffects.S3Extra1() ** global.accretionInfo.effective) * (1.8 ** player.strangeness[3][0]);
+        let multiplier = (vacuum ? 4000 : 8e-10) * (3 ** researchesS3[0]) * (2 ** researchesS3[3]) * (3 ** researchesS3[5]) * (1.0005 ** player.researchesExtra[3][0]) * (calculateEffects.S3Extra1() ** global.accretionInfo.effective) * (1.8 ** player.strangeness[3][0]);
         if (vacuum) {
             multiplier *= calculateEffects.submersion();
             if (player.elements[4] >= 1) { multiplier *= 1.4; }
