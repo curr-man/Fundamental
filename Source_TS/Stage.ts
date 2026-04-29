@@ -466,7 +466,7 @@ export const calculateEffects: calculateEffectsType = {
                 const completions = player.challenges.stability;
                 base /= 2 ** Math.max(player.stage.resets + completions - 8, 0) * 2 ** completions;
                 if (!interstellar) { base /= 2 ** (completions + 2); }
-            } else if (player.challenges.active === 0 && player.challenges.super) { return 1; }
+            }
         } else { base *= (1.4 ** player.strangeness[6][1]) * (1.4 ** player.tree[1][3]); }
         return base * global.strangeInfo.strangeletsInfo[1] * effectsCache.T0Inflation3;
     }
