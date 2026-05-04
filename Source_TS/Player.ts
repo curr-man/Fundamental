@@ -7,7 +7,7 @@ import { format, switchTab, updateCollapsePoints, visualTrueStageUnlocks } from 
 
 export const player: playerType = {
     version: 'v0.2.7',
-    fileName: 'Fundamental, [dateD.M.Y] [timeH-M-S], [stage]',
+    fileName: 'currman, [dateD.M.Y] [timeH-M-S], [stage]',
     stage: {
         true: 1,
         current: 1,
